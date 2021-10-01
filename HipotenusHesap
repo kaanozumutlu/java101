@@ -1,0 +1,22 @@
+import java.util.Scanner;
+import java.lang.Math;
+
+public class Main3 {
+    public static void main(String[] args) {
+        // c dik ucgende hipotenustur, a ve b diger kenarlardir.
+        int a, b;
+        double c ;
+        Scanner input = new Scanner(System.in);
+        System.out.println("a kenari kac cm?");
+        a = input.nextInt();
+        System.out.println("b kenari kac cm?");
+        b = input.nextInt();
+
+        c=Math.sqrt((a*a)+(b*b));
+
+        System.out.println("hipotenus'un uzunlugu:"+c);
+
+
+
+    }
+}
