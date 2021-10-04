@@ -1,0 +1,29 @@
+import java.util.Scanner;
+public class ManavKasa {
+    public static void main(String[] args) {
+        double muzkg=0.95;
+        double armutkg=2.14;
+        double elmakg=3.67;
+        double domates=1.11;
+        double patlicankg=5.00;
+        double kg;
+        Scanner input=new Scanner(System.in);
+        System.out.print("Muz kac kg:");
+        kg= input.nextDouble();
+        muzkg*=kg;
+        System.out.print("armut kac kg:");
+        kg= input.nextDouble();
+        armutkg*=kg;
+        System.out.print("elma kac kg:");
+        kg= input.nextDouble();
+        elmakg*=kg;
+        System.out.println("domates kac kg:");
+        kg= input.nextDouble();
+        domates*=kg;
+        System.out.println("patlican kac kg");
+        kg= input.nextDouble();
+        patlicankg*=kg;
+        double toplam=muzkg+armutkg+elmakg+domates+patlicankg;
+        System.out.println("Toplan tutar:"+toplam);
+    }
+}
