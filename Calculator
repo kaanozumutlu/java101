@@ -1,0 +1,38 @@
+import java.util.Scanner;
+
+public class HesapMakSwitchCase {
+    public static void main(String[] args) {
+        int n1,n2,choice;
+        Scanner input=new Scanner(System.in);
+        System.out.print("ilk sayiyi girin:");
+        n1= input.nextInt();
+        System.out.print("ikinci sayiyi girin:");
+        n2= input.nextInt();
+        System.out.print("Secim yapiniz:");
+        System.out.println("1-Toplama \n 2-Cikarma \n 3-Carpma \n 4-Bolme");
+        choice= input.nextInt();
+        switch(choice){
+            case 1:
+                System.out.print("Sonuc" +(n1+n2));
+                break;
+            case 2:
+                System.out.print("Sonuc" +(n1-n2));
+                break;
+            case 3:
+                System.out.println("Sonuc" +(n1*n2));
+                break;
+            case 4:
+                if(n2!=0){
+                    System.out.println("Sonuc"+(n1/n2));
+                }else{
+                    System.out.println("bolum 0 olamaz!");
+                }
+                break;
+            default:
+                System.out.println("yanlis secim tekrar dene");
+
+
+        }
+
+    }
+}
