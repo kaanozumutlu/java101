@@ -1,0 +1,49 @@
+import java.util.Scanner;
+
+public class AvarageGrade {
+    public static void main(String[] args) {
+        int mat,fizik,kimya,turkce,muzik;
+        double avGrade;
+        Scanner inp=new Scanner(System.in);
+        System.out.print("Enter your math grade:");
+        mat= inp.nextInt();
+        if(mat<0 || mat>100){
+            System.out.println("wrong grade try again!");
+            return;
+        }
+        System.out.print("Enter your physics grade:");
+        fizik= inp.nextInt();
+        if(fizik<0 || fizik>100){
+            System.out.println("wrong grade try again!");
+            return;
+        }
+        System.out.print("Enter your chem. grade:");
+        kimya= inp.nextInt();
+        if(kimya<0 || kimya>100){
+            System.out.println("wrong grade try again!");
+            return;
+        }
+        System.out.print("Enter your literature grade");
+        turkce= inp.nextInt();
+        if(turkce<0 || turkce>100){
+            System.out.println("wrong grade try again!");
+            return;
+        }
+        System.out.print("Enter your music lecture grade");
+        muzik= inp.nextInt();
+        if(muzik<0 || muzik>100){
+            System.out.println("wrong grade try again!");
+            return;
+        }
+
+        avGrade=(mat+fizik+kimya+turkce+muzik)/5;
+        if(avGrade>55){
+            System.out.println("You Passed! Congrats!");
+        }else{
+            System.out.println("You failed");
+        }
+        System.out.println("Your avarage:"+avGrade);
+    }
+
+
+}
