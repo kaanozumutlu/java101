@@ -1,0 +1,35 @@
+import java.util.Scanner;
+
+public class SayiSirala {
+    public static void main(String[] args) {
+        System.out.println("3 sayi siralam programina hosgeldiniz");
+        int s1, s2, s3;
+        Scanner inp = new Scanner(System.in);
+        System.out.print("ilk sayi:");
+        s1 = inp.nextInt();
+        System.out.print("ikinci sayi:");
+        s2 = inp.nextInt();
+        System.out.print("ucuncu sayi:");
+        s3= inp.nextInt();
+
+        if ((s1 < s2) && (s1 < s3)) {
+            if (s2 < s3) {
+                System.out.println("s1<s2<s3");
+            } else {
+                System.out.println("s1<s3<s2");
+            }
+        } else if ((s2 < s1) && (s2 < s3)) {
+            if (s1 < s3) {
+                System.out.println("s2<s1<s3");
+            } else {
+                System.out.println("s2<s3<s1");
+            }
+        } else if ((s3 < s2) && (s3 < s1)) {
+            if (s2 < s1) {
+                System.out.println("s3<s2<s1");
+            } else {
+                System.out.println("s3<s1<s2");
+            }
+        }
+    }
+}
