@@ -1,0 +1,22 @@
+import java.util.Scanner;
+
+public class KullaniciGirisi {
+    public static void main(String[] args) {
+        String UserName,Password;
+        Scanner inp=new Scanner(System.in);
+        System.out.print("Enter your username:");
+        UserName=inp.nextLine();
+        System.out.print("Enter your password:");
+        Password= inp.nextLine();
+        if(UserName.equals("kaanozumutlu")){
+            if (Password.equals("kaan1234")){
+                System.out.println("Login succesfull");
+
+            }else{
+                System.out.println("incorrect password");
+            }
+            }else{
+            System.out.println("incorrect username-password ");
+        }
+    }
+}
