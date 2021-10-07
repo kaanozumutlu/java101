@@ -1,0 +1,121 @@
+/*Koç Burcu : 21 Mart - 20 Nisan
+Boğa Burcu : 21 Nisan - 21 Mayıs
+İkizler Burcu : 22 Mayıs - 22 Haziran
+Yengeç Burcu : 23 Haziran - 22 Temmuz
+Aslan Burcu : 23 Temmuz - 22 Ağustos
+Başak Burcu : 23 Ağustos - 22 Eylül
+Terazi Burcu : 23 Eylül - 22 Ekim
+Akrep Burcu : 23 Ekim - 21 Kasım
+Yay Burcu : 22 Kasım - 21 Aralık
+Oğlak Burcu : 22 Aralık - 21 Ocak
+Kova Burcu : 22 Ocak - 19 Şubat
+Balık Burcu : 20 Şubat - 20 Mart*/
+import java.util.Scanner;
+
+public class Horoscope {
+    public static void main(String[] args) {
+        int day, month;
+        Scanner inp = new Scanner(System.in);
+        System.out.print("Date of birth:");
+        day = inp.nextInt();
+        System.out.print("Month of birth:");
+        month = inp.nextInt();
+        if (0 < day && day < 32) {
+            if (0 < month && month < 13) {
+                switch (month) {
+                    case 1:
+                        if (day < 22) {
+                            System.out.println("Oglak Burcusunuz!");
+                            break;
+                        } else {
+                            System.out.println("Kova Burcusunuz");
+                        }
+
+                    case 2:
+                        if (day < 20) {
+                            System.out.println("Kova Burcusunuz!");
+                            break;
+                        } else {
+                            System.out.println("Balik burcusunuz!");
+                        }
+                    case 3:
+                        if (day < 21) {
+                            System.out.println("Balik burcusunuz!");
+                            break;
+                        } else {
+                            System.out.println("Koc burcusunuz!");
+                        }
+                    case 4:
+                        if (day < 20) {
+                            System.out.println("Koc burcusunuz!");
+                            break;
+                        } else {
+                            System.out.println("Boga burcusunuz!");
+                        }
+                    case 5:
+                        if (day < 21) {
+                            System.out.println("Boga burcusunuz!");
+                            break;
+                        } else {
+                            System.out.println("ikizler burcusunuz!");
+                        }
+                    case 6:
+                        if (day < 22) {
+                            System.out.println("ikizler burcusunuz!");
+                            break;
+                        } else {
+                            System.out.println("Yengec burcusunuz!");
+                        }
+                    case 7:
+                        if (day < 22) {
+                            System.out.println("Yengec Burcusunuz!");
+                            break;
+                        } else {
+                            System.out.println("Aslan burcusunuz!");
+                        }
+                    case 8:
+                        if (day < 22) {
+                            System.out.println("Aslan Burcusunuz!");
+                            break;
+                        } else {
+                            System.out.println("Basak Burcusunuz!");
+                        }
+                    case 9:
+                        if (day < 22) {
+                            System.out.println("Basak burcusunuz!");
+                            break;
+                        } else {
+                            System.out.println("terazi burcusunuz!");
+                        }
+                    case 10:
+                        if (day < 22) {
+                            System.out.println("Terazi Burcusunuz");
+                            break;
+                        } else {
+                            System.out.println("Akrep burcusunuz!");
+                        }
+                    case 11:
+                        if (day < 22) {
+                            System.out.println("Akrep Burcusunuz!");
+                            break;
+                        } else {
+                            System.out.println("Yay burcusunuz!");
+                        }
+                    case 12:
+                        if (day < 22) {
+                            System.out.println("Yay burcusunuz!");
+                            break;
+                        } else {
+                            System.out.println("Oglak burcusunuz!");
+                        }
+
+                }
+
+            } else {
+                System.out.println("Yanlis Ay degeri girdiniz!");
+            }
+        } else {
+            System.out.println("Yanlis gun bilgisi girdiniz! Tekrar deneyin");
+        }
+    }
+}
