@@ -1,0 +1,36 @@
+import java.util.Scanner;
+
+public class ChineseZodiac {
+    public static void main(String[] args) {
+        int bday;
+        Scanner inp=new Scanner(System.in);
+        System.out.print("Please enter your date of birth:");
+        bday= inp.nextInt();
+        if(bday%12==0){
+            System.out.println("Monkey");
+        }else if(bday%12==1){
+            System.out.println("Cock");
+        }else if(bday%12==2){
+            System.out.println("Dog");
+        }else if(bday%12==3){
+            System.out.println("Pig");
+        }else if(bday%12==4){
+            System.out.println("Mouse");
+        }else if(bday%12==5){
+            System.out.println("Bullock");
+        }else if(bday%12==6){
+            System.out.println("Tiger");
+        }else if(bday%12==7){
+            System.out.println("Rabbit");
+        }else if(bday%12==8){
+            System.out.println("Dragon");
+        }else if(bday%12==9){
+            System.out.println("Snake");
+        }else if(bday%12==10){
+            System.out.println("Horse");
+        }else if(bday%12==11){
+            System.out.println("Sheep");
+        }else{
+            System.out.println("Invalid Date of birth please try again!");}
+    }
+}
