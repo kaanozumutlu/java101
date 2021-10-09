@@ -1,0 +1,18 @@
+import java.util.Scanner;
+
+public class ArtikYil {
+    public static void main(String[] args) {
+        int year;
+        Scanner inp=new Scanner(System.in);
+        System.out.print("Please enter year value:");
+        year= inp.nextInt();
+        if(year%4==0){
+            System.out.println("artik yildir");
+            if(year%100==0 && year%400==0){
+                System.out.println("Artik yildir!");
+            }
+        }else{
+            System.out.println("artik yil degildir!");
+        }
+    }
+}
