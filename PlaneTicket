@@ -1,0 +1,53 @@
+import java.util.Scanner;
+
+public class Plane {
+    public static void main(String[] args) {
+        double km, normalPrice, ageDisc, roundDisc;
+        int age, tripType;
+        Scanner inp = new Scanner(System.in);
+        System.out.print("Please enter your trip distance(km):");
+        km = inp.nextDouble();
+        System.out.print("Please enter your age:");
+        age = inp.nextInt();
+        System.out.print("Please enter yout trip type: oneway(1) roundtrip(2):");
+        tripType = inp.nextInt();
+        normalPrice = km * 0.1;
+        if (tripType == 1) {
+            if (age < 12) {
+                ageDisc = normalPrice * 0.5;
+                normalPrice -= ageDisc;
+                System.out.println("Price of tickets:" + normalPrice);
+            } else if (12 < age && age < 24) {
+                ageDisc = normalPrice * 0.1;
+                normalPrice -= ageDisc;
+                System.out.println("Price of tickets:" + normalPrice);
+            } else if (65 < age) {
+                ageDisc = normalPrice * 0.3;
+                normalPrice -= ageDisc;
+                System.out.println("Price of tickets:" + normalPrice);
+            } else {
+                System.out.println("Price of tickets:" + normalPrice);
+            }
+        } else {
+            roundDisc = normalPrice * 0.2;
+            if (age < 12) {
+                ageDisc = normalPrice * 0.5;
+                normalPrice -= (ageDisc + roundDisc);
+                System.out.println("Price of tickets:" + normalPrice);
+            } else if (12 < age && age < 24) {
+                ageDisc = normalPrice * 0.1;
+                normalPrice -= (ageDisc + roundDisc);
+                System.out.println("Price of tickets:" + normalPrice);
+            } else if (65 < age) {
+                ageDisc = normalPrice * 0.3;
+                normalPrice -= (ageDisc + roundDisc);
+                System.out.println("Price of tickets:" + normalPrice);
+            } else {
+                normalPrice -= roundDisc;
+                System.out.println("Price of tickets:" + normalPrice);
+            }
+
+        }
+
+    }
+}
