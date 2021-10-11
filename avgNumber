@@ -1,0 +1,23 @@
+import java.util.Scanner;
+//girilen sayiya kadar sayilardan 3 e ve 4 e tam bolunen say ort bulan program
+public class forExample {
+    public static void main(String[] args) {
+        int sayi, topla1=0, topla2=0;
+        Scanner inp = new Scanner(System.in);
+        System.out.print("sayi giriniz:");
+        sayi = inp.nextInt();
+        for (int i = 0; i < sayi; i++) {
+            if (i % 3 == 0) {
+                topla1 += i;
+
+            } else if (i % 4 == 0) {
+                topla2 += i;
+
+            }
+
+        }
+        int avg = (topla1 + topla2) / 2;
+        System.out.println("3 e ve 4 e bolunen sayilarin avg:" + avg);
+
+    }
+}
