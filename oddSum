@@ -1,0 +1,21 @@
+import java.util.Scanner;
+/*Java döngüler ile negatif bir değer girilene kadar 
+kullanıcıdan girişleri kabul eden ve girilen değerlerden 
+tek sayıları toplayıp ekrana basan programı yazıyoruz.
+ */
+public class oddSum {
+    public static void main(String[] args) {
+        int number,toplam=0;
+        Scanner inp=new Scanner(System.in);
+        System.out.print("bir sayi giriniz:");
+        do{
+            number= inp.nextInt();
+            System.out.print("bir sayi giriniz:");
+            if(number%2==1){
+                toplam+=number;
+            }
+        }while(number>0);
+        System.out.println("Simdiye kadar girilen Tek sayi toplami:"+toplam);
+            
+    }
+}
