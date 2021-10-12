@@ -1,0 +1,15 @@
+import java.util.Scanner;
+public class ustluSayi {
+    public static void main(String[] args) {
+        int n,k,result=1;
+        Scanner inp=new Scanner(System.in);
+        System.out.println("ustu alinicak sayi:");
+        n=inp.nextInt();
+        System.out.println("ustu girin:");
+        k= inp.nextInt();
+        for(int i=1;i<=k;i++){
+            result*=n;
+        }
+        System.out.println("Sonuc:"+result);
+    }
+}
