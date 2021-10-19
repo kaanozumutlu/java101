@@ -1,0 +1,25 @@
+/*   *  n tane satir , n-i kadar bosluk koy, 2n-i kadar yildiz koy
+    ***
+   *****
+  *******
+ *********
+***********  girilen n sayisi kadar satirdan olusan ucgen */
+import java.util.Scanner;
+public class yildizUcgen {
+    public static void main(String[] args) {
+        int n;
+        Scanner inp=new Scanner(System.in);
+        System.out.print("n sayisi:");
+        n= inp.nextInt();
+        for(int i=1;i<=n;i++){
+            for(int k=1; k<=(n-i);k++){
+                System.out.print(" ");
+        }
+            for(int j=1;j<=(2*i)-1;j++){
+                System.out.print("*");
+            }
+            System.out.println();
+
+            }
+    }
+}
