@@ -1,0 +1,16 @@
+import java.util.Scanner;
+
+public class basToplam {
+    public static void main(String[] args) {
+        int number, basValue = 0, sum = 0;
+        Scanner inp = new Scanner(System.in);
+        System.out.print("Sayiyi girin:");
+        number = inp.nextInt();
+        while (number != 0) {
+            basValue = number % 10;
+            sum += basValue;
+            number/=10;
+        }
+        System.out.print("bas sayilarinin toplami:" + sum);
+    }
+}
