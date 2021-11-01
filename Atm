@@ -1,0 +1,45 @@
+import java.util.Scanner;
+
+public class Atm {
+    public static void main(String[] args) {
+        String userName,Password;
+        int right=3,select;
+        double balance=300,withdraw,add;
+        while(right>0){
+        Scanner inp = new Scanner(System.in);
+        System.out.print("Kullanici adinizi girin:");
+        userName = inp.nextLine();
+        System.out.print("Sifrenizi giriniz:");
+        Password = inp.nextLine();
+        if(userName.equals("kaanozumutlu")&& Password.equals("Kaan1234")){
+            System.out.println("Sisteme giris basarili!");
+           do{
+               System.out.println("1-Para Cekme\n2-Bakiye Sorgulama\n3-Para Yatirma\n4-Cikis");
+            select = inp.nextInt();
+            if(select==1){
+                System.out.println("Cekmek istediginiz tutar:");
+                withdraw = inp.nextDouble();
+                if(withdraw>balance){
+                    System.out.println("Bakiyeden yuksek tutar cekemezsiniz!");
+                }else{
+                    balance-=withdraw;
+                }
+            }else if(select==2){
+                System.out.println("Bakiyeniz:"+balance);
+            }else if(select==3){
+                System.out.println("Yatirmak istediginiz tutar:");
+                add= inp.nextDouble();
+                balance+=add;
+            }
+        }while(select != 4);
+            System.out.println("Cikis basarili!");
+            break;
+            }else{
+            System.out.println("Hatali giris! Kalan hak:"+--right);
+        }
+        if(right==0){
+            System.out.println("Hesabiniz bloke edilmistir! Bankayi arayiniz!");
+        }
+        }
+    }
+}
