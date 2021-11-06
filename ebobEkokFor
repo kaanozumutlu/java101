@@ -1,0 +1,33 @@
+import java.util.Scanner;
+//ekok formul=(n1*n2)/ebob
+public class EbobEkok {
+    public static void main(String[] args) {
+        Scanner inp = new Scanner(System.in);
+        int n1, n2;
+        System.out.print("n1 sayisini girin:");
+        n1 = inp.nextInt();
+        System.out.print("n2 sayisini girin:");
+        n2 = inp.nextInt();
+        int ebob=1;
+        if (n1 < n2) {
+            System.out.println("n2 sayisi buyuk olan sayidir.");
+            for (int i = n1; i>=1; i--) {
+                if (n1 % i == 0 && n2 % i == 0) {
+                    ebob=i;
+                    System.out.println(ebob);
+                    break;
+                }
+            }
+        } else {
+            System.out.println("n1 sayisi buyuk olan sayidir");
+            for (int k = n2; k >=0; k--) {
+                if (n1 % k == 0 && n2 % k == 0) {
+                    ebob=k;
+                    System.out.println(ebob);
+                    break;
+                }
+            }
+        }
+        System.out.println("iki sayisinin ekoku:"+(n1*n2)/ebob);
+    }
+}
