@@ -1,0 +1,50 @@
+//Java ile klavyeden girilen N tane sayma sayısından en büyük ve en küçük sayıları bulan ve bu sayıları ekrana yazan program
+
+import java.util.Scanner;
+public class Nminmax {
+    public static void main(String[] args) {
+        Scanner inp = new Scanner(System.in);
+        int n;
+        int n1, n2, n3, max = 1,min=1;
+        System.out.print("kac tane sayi giriceksiniz:");
+        n = inp.nextInt();
+        for (int i = 1; i <= n;i++) {
+            System.out.print(i+".sayiyi girin:");
+            n1 = inp.nextInt();
+            i++;
+            System.out.print(i+".sayiyi girin:" );
+            n2 = inp.nextInt();
+            i++;
+            System.out.print(i+".sayiyi girin");
+            n3= inp.nextInt();
+
+
+            if (n1 > n2 && n1 > n3) {
+                max = n1;
+                if(n2>n3){
+                    min=n3;
+                }else{
+                    min=n2;
+                }
+
+            } else if (n2 > n1 && n2 > n3) {
+                max = n2;
+                if (n1 > n3) {
+                    min=n3;
+                }else{
+                    min=n1;
+                }
+
+            } else {
+                max = n3;
+                if(n2>n1){
+                    min=n1;
+                }else{
+                    min=n2;
+                }
+            }
+        }
+        System.out.println("max deger" + max);
+        System.out.println("min deger"+ min);
+    }
+}
